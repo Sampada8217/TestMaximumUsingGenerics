@@ -30,6 +30,20 @@ public class Maximum {
 
         return maxNumberFloat;
     }
+    public  String testMaxString(String x,String y,String z) {
+        String maxString=z;
+
+        if(y.compareTo(maxString) > 0){
+            maxString=y;
+        }
+        else if (x.compareTo(maxString) > 0){
+            maxString=x;
+        }
+        else
+            maxString=z;
+
+        return maxString;
+    }
 }
 
 

@@ -30,9 +30,6 @@ public class MaximumTest {
         Assert.assertEquals(6, max);
     }
 
-
-
-
     @Test
     public void givenMaxValueFloat_atPos1_shouldReturn_sameNumber() {
         Maximum maximum = new Maximum();
@@ -56,6 +53,24 @@ public class MaximumTest {
 
     }
 
+    @Test
+    public void givenMaxString_atPos1_shouldReturn_sameString() {
+        Maximum maximum=new Maximum();
+        String maxString=maximum.testMaxString("Banana","Apple","Peach");
+        Assert.assertEquals("Peach",maxString);
+    }
+    @Test
+    public void givenMaxString_atPos2_shouldReturn_sameString() {
+        Maximum maximum=new Maximum();
+        String maxString=maximum.testMaxString("Apple","Banana","Peach");
+        Assert.assertEquals("Peach",maxString);
+    }
+    @Test
+    public void givenMaxString_atPos3_shouldReturn_sameString() {
+        Maximum maximum=new Maximum();
+        String maxString=maximum.testMaxString("Apple","Peach","Banana");
+        Assert.assertEquals("Peach",maxString);
+    }
 
 }
 
