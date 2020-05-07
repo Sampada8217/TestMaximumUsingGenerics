@@ -1,33 +1,25 @@
 package com.TestMaximumUsingGenerics;
 
 public class Maximum<E extends  Comparable<E>> {
-    E x;
-    E y;
-    E z;
-    public Maximum(E x ,E y, E z){
-        this.x=x;
-        this.y=y;
-        this.z=z;
-    }
+ E[] elements;
+    public Maximum(E... elements){
+        this.elements=elements;
 
+    }
     public Maximum() {
 
     }
 
-    public E testMaxValue(E x, E y, E z) {
-        E maxNumber = z;
-
-        if (y.compareTo(maxNumber) > 0) {
-            maxNumber = y;
-
-        } else if (x.compareTo(maxNumber) > 0) {
-            maxNumber = x;
-        } else
-            maxNumber = z;
-
-        return maxNumber;
+    public static <E extends  Comparable<E>> E testMaxValue(E ... elements) {
+        E max = elements[0];
+        for (E element : elements) {
+            if (element.compareTo(max) > 0) {
+                max = element;
+            }
+        }
+        return max;
     }
-    
+
 }
 
 
