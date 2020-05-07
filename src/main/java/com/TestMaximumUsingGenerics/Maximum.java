@@ -1,9 +1,9 @@
 package com.TestMaximumUsingGenerics;
 
-public class Maximum {
+public class Maximum<E extends  Comparable<E>> {
 
-    public Integer testMaxValue(Integer x, Integer y, Integer z) {
-        Integer maxNumber = z;
+    public E testMaxValue(E x, E y, E z) {
+        E maxNumber = z;
 
         if (y.compareTo(maxNumber) > 0) {
             maxNumber = y;
@@ -15,36 +15,8 @@ public class Maximum {
 
         return maxNumber;
     }
-
-
-    public static Float testMaxFloatValue(Float a, Float b, Float c) {
-        Float maxNumberFloat = c;
-
-        if (b.compareTo(maxNumberFloat) > 0) {
-            maxNumberFloat = b;
-
-        } else if (a.compareTo(maxNumberFloat) > 0) {
-            maxNumberFloat = a;
-        } else
-            maxNumberFloat = c;
-
-        return maxNumberFloat;
-    }
-    public  String testMaxString(String x,String y,String z) {
-        String maxString=z;
-
-        if(y.compareTo(maxString) > 0){
-            maxString=y;
-        }
-        else if (x.compareTo(maxString) > 0){
-            maxString=x;
-        }
-        else
-            maxString=z;
-
-        return maxString;
-    }
 }
+
 
 
 
