@@ -2,6 +2,7 @@ package com.TestMaximumUsingGenerics;
 
 public class Maximum<E extends  Comparable<E>> {
     E[] elements;
+
     @SafeVarargs
     public Maximum(E... elements){
         this.elements=elements;
